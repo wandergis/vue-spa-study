@@ -37,11 +37,11 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
-          "style-loader", "css-loader?sourceMap")
+          "style-loader", "css-loader?sourceMap!cssnext-loader")
       },
       {
         test: /\.(jpg|png|gif)$/,
-        loader: "file-loader?name=images/[hash].[ext]"
+        loader: "file-loader?name=images/[name].[hash].[ext]"
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -60,13 +60,16 @@ module.exports = {
         loader: 'html-loader'
       }]
   },
+  vue: {
+    loaders: {
+      css: ExtractTextPlugin.extract("css")
+    }
+  },
   resolve: {
     // require时省略的扩展名，如：require('module') 不需要module.js
     extension: ['', '.js'],
     //别名
-    alias: {
-
-    }
+    alias: {}
   },
   plugins: plugins,
   devtool: '#source-map'
