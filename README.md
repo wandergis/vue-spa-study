@@ -48,3 +48,15 @@ npm install vue-router
         <p>当前路由参数: {{$route.params | json}}</p>
     </div>
    ```
+
+路由匹配,我理解是restful
+
+```
+    route.map({
+        '/user/:username':{
+            component:{
+                template:"<p>用户名是{{$route.params.username}}</p>"
+            }
+        }
+    })
+```
