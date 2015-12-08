@@ -99,7 +99,7 @@ npm install vue-router
 
 默认值:`false`,在切换钩子函数中发生异常不吞掉
 
-## 5.<router-view>
+## 5.`<router-view>`
 
 用于渲染匹配的组件,可以传递`props`,`v-transition`和`transition-mode`完整支持,`v-ref`支持,被渲染的对象会注册到父级组件的`this.$`对象上.
 但是不支持`wait-for`,需要使用切换钩子函数 `active`控制切换的时机.
