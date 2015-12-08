@@ -10,21 +10,21 @@ npm install vue-router
 
 路由替换区域:
 
-```<router-view></router-view>```
+`<router-view></router-view>`
 
 子路由:
 
 ```
-router.map({
-    '/index':{
-    component:Index,
-    subRoutes:{
-        '/':{
-            component:{
-                template:'<p>这是默认的嵌套子路由</p>'
+    router.map({
+        '/index':{
+        component:Index,
+        subRoutes:{
+            '/':{
+                component:{
+                    template:'<p>这是默认的嵌套子路由</p>'
+                    }
                 }
             }
         }
-    }
-})
+    })
 ```
