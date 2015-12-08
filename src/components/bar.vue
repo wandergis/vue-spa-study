@@ -3,16 +3,15 @@
  */
 <template>
     <div>
-        <input type="text" v-model="profile">
-        <ul>
-            <li>{{profile}}</li>
-        </ul>
+        <p>{{bar}}</p>
     </div>
 </template>
 <script>
     module.exports={
-        data:{
-            profile:"Hello profile"
+        data: function () {
+            return {
+                bar:"Hello bar"
+            }
         }
     }
 </script>
