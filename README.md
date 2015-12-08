@@ -31,6 +31,7 @@ npm install vue-router
 
 ## 路由对象
 路由对象暴露了以下几个属性:
+
 1. `$route.path`,字符串,当前路由对象的路径,如:`"/foo/bar"`
 2. `$route.params`,对象,包含路由中动态片段和全匹配片段的键值对
 3. `$route.query`,对象,包含路由中查询参数的键值对,例:`/foo?user=1`会得到`$route.query.user=1`
