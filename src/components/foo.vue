@@ -4,6 +4,7 @@
 <template>
     <div>
         <p>{{foo}}</p>
+        <router-view></router-view>
     </div>
 </template>
 <script>

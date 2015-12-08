@@ -5,8 +5,9 @@ var Vue = require('vue');
 var VueRouter = require('vue-router');
 Vue.use(VueRouter);//这里一定要注意
 //var App = require('./app.vue');
-var Foo=require('./components/foo.vue');
-var Bar=require('./components/bar.vue');
+var Foo = require('./components/foo.vue');
+var Bar = require('./components/bar.vue');
+var Baz=require('./components/baz.vue');
 // 创建一个路由器实例
 // 创建实例时可以传入配置参数进行定制，为保持简单，这里使用默认配置
 var router = new VueRouter();
@@ -17,13 +18,28 @@ var router = new VueRouter();
 // 稍后我们会讲解嵌套路由
 router.map({
   '/foo': {
-    component: Foo
+    component: Foo,
+    subRoutes: {
+      '/': {
+        // 当匹配到 /foo 时，这个组件会被渲染到 Foo 组件的 <router-view> 中。
+        // 为了简便，这里使用了一个组件的定义
+        component: {
+          template: '<p>Default sub view for Foo</p>'
+        }
+      },
+      '/bar': {
+        component: Bar
+      },
+      "/baz": {
+        component: Baz
+      }
+    }
   },
   '/bar': {
     component: Bar
   }
 });
-var App=Vue.extend({});
+var App = Vue.extend({});
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 router.start(App, '#app');

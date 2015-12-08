@@ -7,3 +7,21 @@ npm install vue-router
 
 ## 2.跟着文档学吧
 > [文档地址](http://vuejs.github.io/vue-router/zh-cn/basic.html)
+
+路由替换区域:
+```<router-view></router-view>```
+子路由:
+```
+router.map({
+    '/index':{
+    component:Index,
+    subRoutes:{
+        '/':{
+            component:{
+                template:'<p>这是默认的嵌套子路由</p>'
+                }
+            }
+        }
+    }
+})
+```
