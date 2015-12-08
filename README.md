@@ -29,7 +29,7 @@ npm install vue-router
     })
 ```
 
-## 路由对象
+## 3.路由对象
 路由对象暴露了以下几个属性:
 
 1. `$route.path`,字符串,当前路由对象的路径,如:`"/foo/bar"`
@@ -49,7 +49,7 @@ npm install vue-router
     </div>
    ```
 
-路由匹配,我理解是restful
+### 路由匹配,我理解是restful
 
 ```
     route.map({
@@ -60,3 +60,41 @@ npm install vue-router
         }
     })
 ```
+
+### 具名路径
+
+给一条路径加上一个名字能够让我们更方便地进行路径的跳转
+
+## 4.路由选项
+
+### `hashbang`
+
+默认值`true`,会以`#!`开头
+
+### `history`
+
+默认`false`,`true`情况下利用H5的利用 `history.pushState()` 和 `history.replaceState()` 来管理浏览历史记录
+
+### `abstract`
+
+默认 `false`,利用一个不依赖于浏览器的浏览历史虚拟管理后端,虚拟模式在测试或者实际的url并不重要的时候,非常有用,如Electron 或者 Cordova 应用。在非浏览器模式下，路由器同样会退化为抽象模式。
+
+### `root`
+
+默认`null`,只在H5 history模式下可用
+
+### `linkActiveClass`
+
+默认值:`v-link-active` 配置当`v-link`元素匹配的路径时候需要添加到元素上的class
+
+### `saveScrollPosition`
+
+默认值:`false` 只在h5 history模式下可用,当用户点击后退按钮的时候,借助H5 history中的`popstate`事件对应的state来重置页面的滚动位置.
+
+### `transitionOnLoad`
+
+默认值:`false` 初次加载时候是否对`<route-view></route-view>`处理场景切换效果.
+
+### `suppressTransitionError`
+
+默认值:`false`,在切换钩子函数中发生异常不吞掉
