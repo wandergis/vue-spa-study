@@ -98,3 +98,25 @@ npm install vue-router
 ### `suppressTransitionError`
 
 默认值:`false`,在切换钩子函数中发生异常不吞掉
+
+## 5.<router-view>
+
+用于渲染匹配的组件,可以传递`props`,`v-transition`和`transition-mode`完整支持,`v-ref`支持,被渲染的对象会注册到父级组件的`this.$`对象上.
+但是不支持`wait-for`,需要使用切换钩子函数 `active`控制切换的时机.
+
+## 6.`v-link`
+
+用来让用户在不同路径之间跳转的指令,接受一个表达式,并在点击该元素时去调用router.go.
+
+- replace,触发`router.replace()`,不会留下历史记录
+- append,`'/a'`点击跳转`'/a/b'`
+- v-link会自动`<a>`的href属性,并且可以包含mustache标签
+
+## 7.切换钩子函数
+
+1. `data` 参数   `transition`,activate被断定resolve,可以传递参数
+2. `activivate`
+3. `deactivate`
+4. `canActivate`
+5. `canDeactivate`
+6. `canReuse`
