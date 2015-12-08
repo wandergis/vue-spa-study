@@ -9,8 +9,11 @@ npm install vue-router
 > [文档地址](http://vuejs.github.io/vue-router/zh-cn/basic.html)
 
 路由替换区域:
+
 ```<router-view></router-view>```
+
 子路由:
+
 ```
 router.map({
     '/index':{
