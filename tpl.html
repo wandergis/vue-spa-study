@@ -11,7 +11,7 @@
     {% } %}
 </head>
 <body>
-<div id="layout">
+<div id="app">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
@@ -23,8 +23,8 @@
             <a class="pure-menu-heading" href="#">WanderGIS</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">主页</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">关于</a></li>
+                <li class="pure-menu-item"><a v-link="{path:'/foo'}" class="pure-menu-link">主页</a></li>
+                <li class="pure-menu-item"><a v-link="{path:'/bar'}" class="pure-menu-link">关于</a></li>
 
                 <li class="pure-menu-item menu-item-divided pure-menu-selected">
                     <a href="#" class="pure-menu-link">服务</a>
@@ -36,10 +36,10 @@
     </div>
 
     <div id="main">
-        <h1>这是测试标题啊</h1>
-        <a v-link="{path:'/foo'}">去往foo</a>
-        <a v-link="{path:'/bar'}">去往bar</a>
-        <router-view></router-view>
+        <div style="margin-left: 150px">
+            <h1>这是是路由替换区域</h1>
+            <router-view></router-view>
+        </div>
     </div>
 </div>
 {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
