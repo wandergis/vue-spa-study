@@ -1,12 +1,19 @@
 var path = require('path');
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");//将组件中的样式乖乖提取出来
+var HtmlWebpackPlugin = require('html-webpack-plugin');//html模板插入代码
 var vue = require("vue-loader");//webpack的loader插件
 
 //webpck插件
 var plugins = [
   //提公用js到common.js文件中
   new webpack.optimize.CommonsChunkPlugin('common.js'),
+  new HtmlWebpackPlugin({
+    title:"Vue 学习demo",
+    template:"tpl.html",
+    filename:"index.html",
+    hash:true
+  }),
   //将样式统一发布到style.css中
   new ExtractTextPlugin("style.css", {
     allChunks: true,
