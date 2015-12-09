@@ -1,7 +1,8 @@
 # Vue vue-router webpack gulp 学习
-## 截图
+****
+## 效果图
 
-![截图](http://7xp11v.com1.z0.glb.clouddn.com/15-12-9/6082494.jpg)
+![效果图](http://7xp11v.com1.z0.glb.clouddn.com/15-12-9/69325605.jpg)
 
 ## 1.安装(个人喜欢npm的方式)
 ```
