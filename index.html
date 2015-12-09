@@ -2,13 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{%=o.htmlWebpackPlugin.options.title || 'Webpack App'%}</title>
-    {% if (o.htmlWebpackPlugin.files.favicon) { %}
-    <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}">
-    {% } %}
-    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
-    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
-    {% } %}
+    <title>Vue 学习demo</title>
+    
+    
+    <link href="style.css?7719d99c2ac6dae75c1e" rel="stylesheet">
+    
 </head>
 <body>
 <div id="app">
@@ -42,8 +40,10 @@
         </div>
     </div>
 </div>
-{% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
-<script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
-{% } %}
+
+<script src="common.js?7719d99c2ac6dae75c1e"></script>
+
+<script src="build.js?7719d99c2ac6dae75c1e"></script>
+
 </body>
 </html>
