@@ -4,7 +4,6 @@
   "description": "A study vue project!",
   "main": "index.js",
   "dependencies": {
-    "pure": "^2.67.0",
     "purecss": "^0.6.0",
     "vue": "^1.0.10",
     "vue-router": "^0.7.7",
@@ -37,6 +36,10 @@
     "watch": "webpack-dev-server --hot --inline --progress --colors",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandergis/VueStudy.git"
+  },
   "keywords": [
     "vue",
     "vue-router",
@@ -44,5 +47,9 @@
     "gulp"
   ],
   "author": "wandergis",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wandergis/VueStudy/issues"
+  },
+  "homepage": "https://github.com/wandergis/VueStudy#readme"
 }
