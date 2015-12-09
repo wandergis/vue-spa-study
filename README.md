@@ -143,18 +143,18 @@ transition.redirect(path)
 3. `deactivate` `resolve->transition(next)` `reject(reason)->transition.abort(reason)`
 4. `canActivate`
 
-#### 可选择性返回 Promise :
+    #### 可选择性返回 Promise :
 
-- resolve(true) -> transition.next()
-- resolve(false) -> transition.abort()
-- reject(reason) -> transition.abort(reason)
-#### 可选择性返回 Boolean 值：
+    - resolve(true) -> transition.next()
+    - resolve(false) -> transition.abort()
+    - reject(reason) -> transition.abort(reason)
+    #### 可选择性返回 Boolean 值：
 
-- true -> transition.next()
-- false -> transition.abort()
+    - true -> transition.next()
+    - false -> transition.abort()
 
 5. `canDeactivate`
 
-#### 同上
+    #### 同上
 
 6. `canReuse` 返回布尔类型,默认`true`
