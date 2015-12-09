@@ -114,9 +114,47 @@ npm install vue-router
 
 ## 7.切换钩子函数
 
+#### `transition`
+
+```
+transition.from
+
+//一个代表当前路径的路由对象。
+
+transition.to
+
+//一个代表将要切换到的路径的路由对象。
+
+transition.next()
+
+//调用此函数处理切换过程的下一步。
+
+transition.abort([reason])
+
+//调用此函数来终止或者拒绝此次切换。
+
+transition.redirect(path)
+
+//取消当前切换并重定向到另一个路由。
+```
+
 1. `data` 参数   `transition`,activate被断定resolve,可以传递参数
-2. `activivate`
-3. `deactivate`
+2. `activivate` `resolve->transition(next)` `reject(reason)->transition.abort(reason)`
+3. `deactivate` `resolve->transition(next)` `reject(reason)->transition.abort(reason)`
 4. `canActivate`
+
+#### 可选择性返回 Promise :
+
+- resolve(true) -> transition.next()
+- resolve(false) -> transition.abort()
+- reject(reason) -> transition.abort(reason)
+#### 可选择性返回 Boolean 值：
+
+- true -> transition.next()
+- false -> transition.abort()
+
 5. `canDeactivate`
-6. `canReuse`
+
+#### 同上
+
+6. `canReuse` 返回布尔类型,默认`true`
