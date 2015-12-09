@@ -1,20 +1,22 @@
 /**
- * Created by WangMing on 15/12/7.
- */
+* Created by WangMing on 15/12/9.
+*/
+<style>
+
+</style>
+
 <template>
     <div>
-        <p>{{bar}}</p>
+        <h3>{{msg}}</h3>
     </div>
 </template>
+
 <script>
-    module.exports={
+    module.exports = {
         data: function () {
             return {
-                bar:"Hello bar"
+                msg:"这是服务的页面"
             }
         }
     }
 </script>
-<style>
-
-</style>

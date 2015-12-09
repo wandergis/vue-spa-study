@@ -23,21 +23,21 @@
             <a class="pure-menu-heading" href="#">WanderGIS</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a v-link="{path:'/foo'}" class="pure-menu-link">主页</a></li>
-                <li class="pure-menu-item"><a v-link="{path:'/bar'}" class="pure-menu-link">关于</a></li>
+                <li class="pure-menu-item"><a v-link="{path:'/home'}" class="pure-menu-link">主页</a></li>
+                <li class="pure-menu-item"><a v-link="{path:'/about'}" class="pure-menu-link">关于</a></li>
 
-                <li class="pure-menu-item menu-item-divided pure-menu-selected">
-                    <a href="#" class="pure-menu-link">服务</a>
+                <li class="pure-menu-item menu-item-divided">
+                    <a v-link="{path:'/services'}" class="pure-menu-link">服务</a>
                 </li>
 
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">联系</a></li>
+                <li class="pure-menu-item"><a v-link="{path:'/contact'}" class="pure-menu-link">联系</a></li>
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div style="margin-left: 150px">
-            <h1>这是是路由替换区域</h1>
+            <h1>这里是所有应用的标头</h1>
             <router-view></router-view>
         </div>
     </div>
