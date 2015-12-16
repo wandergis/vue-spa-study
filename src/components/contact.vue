@@ -23,7 +23,7 @@
     module.exports = {
         data: function () {
             return {
-                msg:"这是联系的页面"
+                msg:"这是联系人的页面"
             }
         }
     }
