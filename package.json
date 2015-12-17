@@ -1,5 +1,5 @@
 {
-  "name": "vue-study",
+  "name": "vue-spa-study",
   "version": "0.1.0",
   "description": "A study vue project!",
   "main": "index.js",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wandergis/VueStudy.git"
+    "url": "git+https://github.com/wandergis/vue-spa-study.git"
   },
   "keywords": [
     "vue",
@@ -52,7 +52,7 @@
   "author": "wandergis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wandergis/VueStudy/issues"
+    "url": "https://github.com/wandergis/vue-spa-study/issues"
   },
-  "homepage": "https://github.com/wandergis/VueStudy#readme"
+  "homepage": "https://github.com/wandergis/vue-spa-study#readme"
 }
